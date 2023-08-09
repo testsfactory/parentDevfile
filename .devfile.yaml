@@ -1,0 +1,17 @@
+schemaVersion: 2.2.0
+metadata:
+  name: sample-using-parent
+parent:
+  uri: https://gist.githubusercontent.com/l0rd/274790e950ca2298fbbdb693ebd50f9d/raw/4c709979c7024ff7b9b6ebe2299e462297cf5077/parent.yaml
+  components:
+    - name: tools
+      container:
+        env:
+          - name: DEVFILE_ENV_VAR
+            value: 'true'
+commands:
+  - id: devfile-command
+    exec:
+      label: '1. This command from the devfile'
+      component: tools
+      commandLine: echo "Hello from devfile"
