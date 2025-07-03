@@ -6,7 +6,7 @@ components:
     attributes:
        controller.devfile.io/merge-contribution: true
     container:
-      image:  quay.io/devspaces/udi-rhel8:latest
+      image:  registry.redhat.io/devspaces/udi-rhel9@sha256:c1cb5933306b344f2b367ea9301e12380ae9f197902ccda6bac73e533e9d3173
       env:
         - name: PARENT_ENV_VAR
           value: 'true'
